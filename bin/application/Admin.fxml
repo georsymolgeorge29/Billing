@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <center>
+      <AnchorPane onMouseClicked="#handleMouseAction" prefHeight="901.0" prefWidth="1246.0" style="-fx-background-color: #80d4ff;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="212.0" layoutY="23.0" prefHeight="27.0" prefWidth="213.0" text="Admin Registration" textFill="#38078d">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tvadmin" layoutX="14.0" layoutY="596.0" onMouseClicked="#handleMouseAction" onSort="#showAdmin" prefHeight="259.0" prefWidth="1214.0">
+              <columns>
+                <TableColumn fx:id="colaccount_id" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="colusername" prefWidth="98.0" text="USERNAME" />
+                  <TableColumn fx:id="colfirstname" prefWidth="135.0" text="FIRSTNAME" />
+                  <TableColumn fx:id="collastname" prefWidth="117.0" text="LASTNAME" />
+                  <TableColumn fx:id="colemail" prefWidth="132.0" text="EMAIL" />
+                  <TableColumn fx:id="colpassword" minWidth="0.0" prefWidth="155.0" text="PASSWORD" />
+                  <TableColumn fx:id="coladdress" minWidth="0.0" prefWidth="158.0" text="ADDRESS" />
+                  <TableColumn fx:id="colcontact_no" minWidth="0.0" prefWidth="137.0" text="MOB" />
+                  <TableColumn fx:id="colcomp_name" minWidth="0.0" prefWidth="203.0" text="COMP NAME" />
+              </columns>
+            </TableView>
+            <Label layoutX="84.0" layoutY="66.0" prefHeight="37.0" prefWidth="177.0" text="Account Id" textFill="#38078d">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="116.0" prefHeight="37.0" prefWidth="177.0" text="User Name" textFill="#38078d">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="168.0" prefHeight="37.0" prefWidth="177.0" text="First name" textFill="#38078d">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="209.0" prefHeight="37.0" prefWidth="177.0" text="Last name" textFill="#38078d">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="255.0" prefHeight="37.0" prefWidth="177.0" text="Email" textFill="#38078d">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="306.0" prefHeight="37.0" prefWidth="177.0" text="Password" textFill="#38078d">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="354.0" prefHeight="37.0" prefWidth="177.0" text="Address" textFill="#38078d">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="405.0" prefHeight="37.0" prefWidth="177.0" text="Contact No" textFill="#38078d">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="455.0" prefHeight="37.0" prefWidth="177.0" text="Company name" textFill="#38078d">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfaccount_id" layoutX="304.0" layoutY="69.0" prefHeight="31.0" prefWidth="235.0" />
+            <TextField fx:id="tfusername" layoutX="306.0" layoutY="119.0" prefHeight="31.0" prefWidth="232.0" />
+            <TextField fx:id="tffirstname" layoutX="307.0" layoutY="171.0" prefHeight="31.0" prefWidth="230.0" />
+            <TextField fx:id="tflastname" layoutX="309.0" layoutY="212.0" prefHeight="31.0" prefWidth="227.0" />
+            <TextField fx:id="tfemail" layoutX="309.0" layoutY="258.0" prefHeight="31.0" prefWidth="226.0" />
+            <TextField fx:id="tfpassword" layoutX="307.0" layoutY="309.0" prefHeight="31.0" prefWidth="229.0" />
+            <TextField fx:id="tfaddress" layoutX="308.0" layoutY="357.0" prefHeight="31.0" prefWidth="228.0" />
+            <TextField fx:id="tfcontact_no" layoutX="305.0" layoutY="408.0" prefHeight="31.0" prefWidth="234.0" />
+            <TextField fx:id="tfcomp_name" layoutX="304.0" layoutY="458.0" prefHeight="31.0" prefWidth="237.0" />
+            <Button fx:id="btnadd" layoutX="304.0" layoutY="527.0" mnemonicParsing="false" onAction="#handleButtonupdateAction" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: #003cb3;" text="ADD" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnupdate" layoutX="384.0" layoutY="527.0" mnemonicParsing="false" onAction="#handleButtonupdateAction" style="-fx-background-color: #003cb3;" text="UPDATE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btndelete" layoutX="465.0" layoutY="527.0" mnemonicParsing="false" onAction="#handleButtonupdateAction" prefHeight="31.0" prefWidth="76.0" style="-fx-background-color: #003cb3;" text="DELETE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
