@@ -64,7 +64,7 @@ public class SampleController1 implements Initializable{
 	    @FXML
 	    private Button btnstaffdelete;
 
-	  
+	  //Staff details
 
 	    @FXML
 	    private TableView<Staff> tvstaff;
@@ -89,6 +89,79 @@ public class SampleController1 implements Initializable{
 
 	    @FXML
 	    private TableColumn<Staff, String> colcomp_name;
+	    
+	    
+	    //Stock details
+	    
+	    @FXML
+	    private TextField tfproduct_id;
+
+	    @FXML
+	    private TextField tfproduct_name;
+
+	    @FXML
+	    private TextField tfcomp_name;
+
+	    @FXML
+	    private TextField category_name;
+
+	    @FXML
+	    private TextField tfexp_name;
+
+	    @FXML
+	    private TextField tfquantity;
+
+	    @FXML
+	    private TextField tfquantity_add;
+
+	    @FXML
+	    private TextField tf_mrp;
+
+	    @FXML
+	    private TextField tfdiscount;
+
+	    @FXML
+	    private Button btnstockadd;
+
+	    @FXML
+	    private Button btnstockupdate;
+
+	    @FXML
+	    private Button btnstockdelete;
+
+	    @FXML
+	    private TableView<?> tvstock;
+
+	    @FXML
+	    private TableColumn<?, ?> colproduct_id;
+
+	    @FXML
+	    private TableColumn<?, ?> colproduct_name;
+
+	    @FXML
+	    private TableColumn<?, ?> colstockcomp_name;
+
+	    @FXML
+	    private TableColumn<?, ?> colstockcategory_name;
+
+	    @FXML
+	    private TableColumn<?, ?> colexp_date;
+
+	    @FXML
+	    private TableColumn<?, ?> colquantity;
+
+	    @FXML
+	    private TableColumn<?, ?> colquantity_add;
+
+	    @FXML
+	    private TableColumn<?, ?> colmrp;
+
+	    @FXML
+	    private TableColumn<?, ?> coldiscount;
+
+	    
+	    
+	    
 	    
 	    Stage dialogStage = new Stage();
 	    Scene scene;
