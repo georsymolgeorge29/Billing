@@ -103,10 +103,10 @@ public class SampleController1 implements Initializable{
 	    private TextField tfcomp_name;
 
 	    @FXML
-	    private TextField category_name;
+	    private TextField tfcategory_name;
 
 	    @FXML
-	    private TextField tfexp_name;
+	    private TextField tfexp_date;
 
 	    @FXML
 	    private TextField tfquantity;
@@ -115,7 +115,7 @@ public class SampleController1 implements Initializable{
 	    private TextField tfquantity_add;
 
 	    @FXML
-	    private TextField tf_mrp;
+	    private TextField tfmrp;
 
 	    @FXML
 	    private TextField tfdiscount;
@@ -130,34 +130,34 @@ public class SampleController1 implements Initializable{
 	    private Button btnstockdelete;
 
 	    @FXML
-	    private TableView<?> tvstock;
+	    private TableView<Stock> tvstock;
 
 	    @FXML
-	    private TableColumn<?, ?> colproduct_id;
+	    private TableColumn<Stock, String> colproduct_id;
 
 	    @FXML
-	    private TableColumn<?, ?> colproduct_name;
+	    private TableColumn<Stock, String> colproduct_name;
 
 	    @FXML
-	    private TableColumn<?, ?> colstockcomp_name;
+	    private TableColumn<Stock, String> colstockcomp_name;
 
 	    @FXML
-	    private TableColumn<?, ?> colstockcategory_name;
+	    private TableColumn<Stock, String> colstockcategory_name;
 
 	    @FXML
-	    private TableColumn<?, ?> colexp_date;
+	    private TableColumn<Stock, String> colexp_date;
 
 	    @FXML
-	    private TableColumn<?, ?> colquantity;
+	    private TableColumn<Stock, Integer> colquantity;
 
 	    @FXML
-	    private TableColumn<?, ?> colquantity_add;
+	    private TableColumn<Stock, Integer> colquantity_add;
 
 	    @FXML
-	    private TableColumn<?, ?> colmrp;
+	    private TableColumn<Stock, Integer> colmrp;
 
 	    @FXML
-	    private TableColumn<?, ?> coldiscount;
+	    private TableColumn<Stock, Integer> coldiscount;
 
 	    
 	    
@@ -275,4 +275,46 @@ public class SampleController1 implements Initializable{
 		showStaff();
 	}
 
+	
+	
+	
+	//STock
+	
+	
+	
+	@FXML
+	private void handleButtonStockAction(ActionEvent event) {        
+        
+        if(event.getSource() == btnstockadd){
+            insertRecordstock();
+        }else if(event.getSource() == btnstockupdate){
+            updateRecordstock();
+        }
+        else if (event.getSource() == btnstockdelete){
+            deleteRecordstock();
+        }
+            
+    }
+	
+
+	private void insertRecordstock(){
+        String query = "INSERT INTO stock VALUES ('" + tfproduct_id.getText() + "','" + tfproduct_name.getText() + "','" + tfcomp_name.getText() + "','"+ tfcategory_name.getText() + "','" + tfexp_date.getText() + "'," + tfquantity.getText() + "," + tfquantity_add.getText() + "," + tfmrp.getText() + "," + tfdiscount.getText() + ")";
+        executeQuery(query);
+        
+        //showStaff();
+    }
+	private void deleteRecordstock() {
+		// TODO Auto-generated method stub
+			 String query = "DELETE FROM staff WHERE staff_id =" + tfstaff_id.getText() + "";
+	        executeQuery(query);
+	        //showStaff();
+	}
+
+	private void updateRecordstock() {
+		// TODO Auto-generated method stub
+		 String query = "UPDATE  staff SET staff_id  = " + tfstaff_id.getText() + ",staff_name = '" + tfstaff_name.getText() + "',mobile_no = " + tfmobile_no.getText() + ",address = '" + tfstaffaddress.getText() + "', email_d = '" + tfemail_d.getText() + "', password = '" +
+	                tfpassword.getText() + "', comp_name = '" + tfstaffcomp_name.getText() + "' WHERE staff_id = " + tfstaff_id.getText() + "";
+	        executeQuery(query);
+	        //showStaff();
+	}
 }

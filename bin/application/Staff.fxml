@@ -12,24 +12,24 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController1">
-   <center>
-      <TabPane prefHeight="872.0" prefWidth="1268.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+   <top>
+      <TabPane prefHeight="872.0" prefWidth="1290.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
           <Tab fx:id="tstaff" text="STAFF">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #80d4ff;">
                      <children>
-                        <Label layoutX="114.0" layoutY="181.0" text="Staff_id" textFill="#38078d">
+                        <Label layoutX="114.0" layoutY="181.0" text="Staff Id" textFill="#38078d">
                            <font>
                               <Font name="System Bold Italic" size="18.0" />
                            </font>
                         </Label>
-                        <Label layoutX="112.0" layoutY="233.0" text="Staff_name" textFill="#38078d">
+                        <Label layoutX="112.0" layoutY="233.0" text="Staff Name" textFill="#38078d">
                            <font>
                               <Font name="System Bold Italic" size="18.0" />
                            </font>
                         </Label>
-                        <Label layoutX="112.0" layoutY="281.0" text="Mobile_no" textFill="#38078d">
+                        <Label layoutX="112.0" layoutY="281.0" text="Mobile No" textFill="#38078d">
                            <font>
                               <Font name="System Bold Italic" size="20.0" />
                            </font>
@@ -39,7 +39,7 @@
                               <Font name="System Bold Italic" size="21.0" />
                            </font>
                         </Label>
-                        <Label layoutX="118.0" layoutY="405.0" text="Email_id" textFill="#38078d">
+                        <Label layoutX="118.0" layoutY="405.0" text="Email Id" textFill="#38078d">
                            <font>
                               <Font name="System Bold Italic" size="21.0" />
                            </font>
@@ -49,7 +49,7 @@
                               <Font name="System Bold Italic" size="21.0" />
                            </font>
                         </Label>
-                        <Label layoutX="117.0" layoutY="526.0" text="Company_no" textFill="#38078d">
+                        <Label layoutX="117.0" layoutY="526.0" text="Company No" textFill="#38078d">
                            <font>
                               <Font name="System Bold Italic" size="19.0" />
                            </font>
@@ -87,7 +87,7 @@
                               <TableColumn fx:id="colcomp_name" prefWidth="136.0" text="COMPANY NAME" />
                           </columns>
                         </TableView>
-                        <Label layoutX="193.0" layoutY="96.0" text="Add Students Details" textFill="#38078d">
+                        <Label layoutX="193.0" layoutY="96.0" text="Add Staffs Details" textFill="#38078d">
                            <font>
                               <Font name="System Bold Italic" size="21.0" />
                            </font>
@@ -98,7 +98,96 @@
           </Tab>
           <Tab fx:id="tstock" text="STOCK">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #80d4ff;" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #80d4ff;">
+                     <children>
+                        <TextField fx:id="tfproduct_id" layoutX="296.0" layoutY="97.0" promptText="PRODUCT ID" />
+                        <TextField fx:id="tfproduct_name" layoutX="296.0" layoutY="156.0" promptText="PRODUCT NAME" />
+                        <TextField fx:id="tfcomp_name" layoutX="296.0" layoutY="219.0" promptText="COMPANY NAME" />
+                        <TextField fx:id="tfcategory_name" layoutX="296.0" layoutY="284.0" promptText="CATEGORY NAME" />
+                        <TextField fx:id="tfexp_date" layoutX="296.0" layoutY="349.0" promptText="EXPIRY DATE" />
+                        <TextField fx:id="tfquantity" layoutX="296.0" layoutY="401.0" promptText="QUANTITY AVLB" />
+                        <TextField fx:id="tfquantity_add" layoutX="296.0" layoutY="458.0" promptText="QUANTITY ADDED" />
+                        <TextField fx:id="tfmrp" layoutX="296.0" layoutY="521.0" promptText="MRP" />
+                        <TextField fx:id="tfdiscount" layoutX="296.0" layoutY="577.0" promptText="DISCOUNT" />
+                        <Label layoutX="67.0" layoutY="99.0" text="Product Id" textFill="#38078d">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="67.0" layoutY="158.0" text="Product Name" textFill="#38078d">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="67.0" layoutY="221.0" text="Company Name" textFill="#38078d">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="67.0" layoutY="286.0" text="Category Name" textFill="#38078d">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="67.0" layoutY="351.0" text="Expiry date" textFill="#38078d">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="67.0" layoutY="406.0" text="Quantity Available" textFill="#38078d">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="67.0" layoutY="460.0" text="Quantity Added" textFill="#38078d">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="67.0" layoutY="523.0" text="Mrp" textFill="#38078d">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="74.0" layoutY="579.0" text="Discount" textFill="#38078d">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="211.0" layoutY="37.0" text="Add Stock Details" textFill="#38078d">
+                           <font>
+                              <Font name="System Bold Italic" size="21.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnstockadd" layoutX="103.0" layoutY="651.0" mnemonicParsing="false" onAction="#handleButtonStockAction" style="-fx-background-color: #003cb3;" text="ADD NEW" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnstockupdate" layoutX="211.0" layoutY="651.0" mnemonicParsing="false" style="-fx-background-color: #003cb3;" text="UPDATE" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnstockdelete" layoutX="305.0" layoutY="651.0" mnemonicParsing="false" style="-fx-background-color: #003cb3;" text="DELETE" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="tvstock" layoutX="491.0" layoutY="21.0" prefHeight="773.0" prefWidth="794.0">
+                          <columns>
+                            <TableColumn fx:id="colproduct_id" maxWidth="5050.0" prefWidth="65.0" text="PRO_ID" />
+                            <TableColumn fx:id="colproduct_name" prefWidth="111.0" text="PRO_NAME" />
+                              <TableColumn fx:id="colstockcomp_name" prefWidth="111.0" text="COMP_NAME" />
+                              <TableColumn fx:id="colstockcategory_name" prefWidth="89.0" text="CAT_NAME" />
+                              <TableColumn fx:id="colexp_date" prefWidth="89.0" text="EXP_DATE" />
+                              <TableColumn fx:id="colquantity" prefWidth="63.0" text="QTY " />
+                              <TableColumn fx:id="colquantity_add" prefWidth="86.0" text="QTY_ADD" />
+                              <TableColumn fx:id="colmrp" minWidth="0.0" prefWidth="77.0" text="MRP" />
+                              <TableColumn fx:id="coldiscount" prefWidth="124.0" text="DISCOUNT" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
             </content>
           </Tab>
             <Tab fx:id="tsales" text="SALES">
@@ -108,5 +197,5 @@
             </Tab>
         </tabs>
       </TabPane>
-   </center>
+   </top>
 </BorderPane>

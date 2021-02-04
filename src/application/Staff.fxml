@@ -103,11 +103,11 @@
                         <TextField fx:id="tfproduct_id" layoutX="296.0" layoutY="97.0" promptText="PRODUCT ID" />
                         <TextField fx:id="tfproduct_name" layoutX="296.0" layoutY="156.0" promptText="PRODUCT NAME" />
                         <TextField fx:id="tfcomp_name" layoutX="296.0" layoutY="219.0" promptText="COMPANY NAME" />
-                        <TextField fx:id="category_name" layoutX="296.0" layoutY="284.0" promptText="CATEGORY NAME" />
-                        <TextField fx:id="tfexp_name" layoutX="296.0" layoutY="349.0" promptText="EXPIRY DATE" />
+                        <TextField fx:id="tfcategory_name" layoutX="296.0" layoutY="284.0" promptText="CATEGORY NAME" />
+                        <TextField fx:id="tfexp_date" layoutX="296.0" layoutY="349.0" promptText="EXPIRY DATE" />
                         <TextField fx:id="tfquantity" layoutX="296.0" layoutY="401.0" promptText="QUANTITY AVLB" />
                         <TextField fx:id="tfquantity_add" layoutX="296.0" layoutY="458.0" promptText="QUANTITY ADDED" />
-                        <TextField fx:id="tf_mrp" layoutX="296.0" layoutY="521.0" promptText="MRP" />
+                        <TextField fx:id="tfmrp" layoutX="296.0" layoutY="521.0" promptText="MRP" />
                         <TextField fx:id="tfdiscount" layoutX="296.0" layoutY="577.0" promptText="DISCOUNT" />
                         <Label layoutX="67.0" layoutY="99.0" text="Product Id" textFill="#38078d">
                            <font>
@@ -159,7 +159,7 @@
                               <Font name="System Bold Italic" size="21.0" />
                            </font>
                         </Label>
-                        <Button fx:id="btnstockadd" layoutX="103.0" layoutY="651.0" mnemonicParsing="false" style="-fx-background-color: #003cb3;" text="ADD NEW" textFill="WHITE">
+                        <Button fx:id="btnstockadd" layoutX="103.0" layoutY="651.0" mnemonicParsing="false" onAction="#handleButtonStockAction" style="-fx-background-color: #003cb3;" text="ADD NEW" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="15.0" />
                            </font>
