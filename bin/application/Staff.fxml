@@ -11,11 +11,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController1">
    <top>
-      <TabPane prefHeight="872.0" prefWidth="1290.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+      <TabPane prefHeight="872.0" prefWidth="1290.0" style="-fx-background-color: #003cb3;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
           <Tab fx:id="tstaff" text="STAFF">
             <content>
@@ -176,7 +177,7 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Button>
-                        <Label alignment="CENTER" layoutX="769.0" layoutY="347.0" onMouseClicked="#handleMouseActionstock" prefHeight="36.0" prefWidth="339.0" text="Click here StockDetails">
+                        <Label alignment="CENTER" layoutX="793.0" layoutY="347.0" onMouseClicked="#handleMouseActionstock" prefHeight="36.0" prefWidth="339.0" text="Click here Stock details" textFill="#38078d">
                            <font>
                               <Font name="System Bold Italic" size="24.0" />
                            </font>
@@ -186,12 +187,17 @@
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets></Label>
+                        <Line endX="219.0" layoutX="881.0" layoutY="378.0" startX="-56.0" />
                      </children></AnchorPane>
             </content>
           </Tab>
             <Tab fx:id="tsales" text="SALES">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #80d4ff;" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #80d4ff;">
+                     <children>
+                        <Label layoutX="296.0" layoutY="184.0" text="Label" />
+                        <TextField layoutX="477.0" layoutY="179.0" />
+                     </children></AnchorPane>
                </content>
             </Tab>
         </tabs>
