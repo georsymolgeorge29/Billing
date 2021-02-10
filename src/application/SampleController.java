@@ -39,12 +39,7 @@ public class SampleController implements Initializable{
 	  @FXML
 	    private Button btnadmin;
 
-	    @FXML
-	    private Button btncashier;
-	    
 	   
-	   
-
 	    @FXML
 	    private TableView<Admin> tvadmin;
 

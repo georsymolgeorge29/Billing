@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
@@ -11,24 +13,35 @@
    <left>
       <AnchorPane prefHeight="801.0" prefWidth="1233.0" style="-fx-background-color: #80d4ff;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="292.0" layoutY="57.0" text="SUPER MARKET BILLING SYSTEM" textFill="#10011b">
+            <Label alignment="CENTER" prefHeight="77.0" prefWidth="1234.0" style="-fx-background-color: #33cc33;" text="SUPER MARKET BILLING SYSTEM" textFill="#10011b">
                <font>
                   <Font name="System Bold" size="39.0" />
                </font></Label>
-            <Button fx:id="btnadmin" layoutX="433.0" layoutY="519.0" mnemonicParsing="false" onAction="#handlebuttonadmin" prefHeight="49.0" prefWidth="141.0" text="ADMIN">
+            <Button fx:id="btnadmin" layoutX="464.0" layoutY="545.0" mnemonicParsing="false" onAction="#handlebuttonadmin" prefHeight="42.0" prefWidth="398.0" style="-fx-background-color: #003cb3;" text="ADMIN REGISTRATION" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="19.0" />
-               </font></Button>
-            <Button fx:id="btncashier" layoutX="433.0" layoutY="587.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="142.0" text="STAFF">
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect></Button>
+            <TextField fx:id="tfusernamelogin" layoutX="458.0" layoutY="293.0" prefHeight="56.0" prefWidth="402.0" promptText="USERNAME" />
+            <TextField fx:id="tfpasswordlogin" layoutX="462.0" layoutY="358.0" prefHeight="56.0" prefWidth="400.0" promptText="PASSWORD" />
+            <Button fx:id="btnadminlogin" layoutX="465.0" layoutY="427.0" mnemonicParsing="false" onAction="#handlebuttonloginAction" prefHeight="42.0" prefWidth="395.0" style="-fx-background-color: #003cb3;" text="LOGIN" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="24.0" />
-               </font></Button>
-            <TextField fx:id="tfusernamelogin" layoutX="558.0" layoutY="318.0" promptText="USERNAME" />
-            <TextField fx:id="tfpasswordlogin" layoutX="558.0" layoutY="370.0" promptText="PASSWORD" />
-            <Button fx:id="btnadminlogin" layoutX="637.0" layoutY="437.0" mnemonicParsing="false" onAction="#handlebuttonloginAction" text="LOGIN" />
-            <Label layoutX="189.0" layoutY="526.0" text="Register Admin?">
+                  <Font name="System Bold" size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect></Button>
+            <Label alignment="CENTER" layoutX="464.0" layoutY="500.0" prefHeight="33.0" prefWidth="395.0" text="Don't have an Account? Register Here!">
                <font>
-                  <Font name="System Bold Italic" size="25.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Label>
          </children>

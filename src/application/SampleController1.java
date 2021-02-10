@@ -12,7 +12,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
@@ -129,38 +131,7 @@ public class SampleController1 implements Initializable{
 	    @FXML
 	    private Button btnstockdelete;
 
-	    @FXML
-	    private TableView<Stock> tvstock;
-
-	    @FXML
-	    private TableColumn<Stock, String> colproduct_id;
-
-	    @FXML
-	    private TableColumn<Stock, String> colproduct_name;
-
-	    @FXML
-	    private TableColumn<Stock, String> colstockcomp_name;
-
-	    @FXML
-	    private TableColumn<Stock, String> colstockcategory_name;
-
-	    @FXML
-	    private TableColumn<Stock, String> colexp_date;
-
-	    @FXML
-	    private TableColumn<Stock, Integer> colquantity;
-
-	    @FXML
-	    private TableColumn<Stock, Integer> colquantity_add;
-
-	    @FXML
-	    private TableColumn<Stock, Integer> colmrp;
-
-	    @FXML
-	    private TableColumn<Stock, Integer> coldiscount;
-
-	    
-	    
+	   
 	    
 	    
 	    Stage dialogStage = new Stage();
@@ -317,4 +288,30 @@ public class SampleController1 implements Initializable{
 	        executeQuery(query);
 	        //showStaff();
 	}
-}
+	
+	 @FXML
+	 private void handleMouseActionstock(MouseEvent event) {
+		 try {
+		    	FXMLLoader fxmlLoader =new FXMLLoader(getClass().getResource("Stockdetails.fxml"));
+		    	Parent root1=(Parent) fxmlLoader.load();
+		    	Stage stage=new Stage();
+		    	stage.setTitle("ViewStock");
+		    	stage.setScene(new Scene(root1));
+		    	stage.show();
+		    }
+		    catch (Exception ex) {
+		    	System.out.println("Cant load window");
+		    	 
+			            ex.printStackTrace();
+			           // System.out.println("error");
+			        }
+		    }
+	 }
+	
+	
+
+
+
+
+
+
